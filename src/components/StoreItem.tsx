@@ -1,3 +1,4 @@
+import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 
 interface Item {
@@ -8,7 +9,8 @@ interface Item {
   }
   
   export function StoreItem({ id, name, price, imgUrl }: Item) {
-    const quantity = 0
+    const {getItemsQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
+const quantity = getItemsQuantity(id)
     return (
       <div className="card">
         <img src={imgUrl} alt={name} />
@@ -18,14 +20,14 @@ interface Item {
         </div>
         <div className="add-cart">
             {quantity === 0 ? (
-            <button>+ Add to card</button>
+            <button onClick={() => increaseCartQuantity(id)}>+ Add to card</button>
         ): <div>
-            <button>-</button>
+            <button onClick={() => decreaseCartQuantity(id)}>-</button>
             <div className="cart-items">
                 <span>{quantity}</span> in cart
             </div>
-            <button>+</button>
-            <div>            <button className="remove">Remove</button>
+            <button onClick={() => increaseCartQuantity(id)}>+</button>
+            <div>            <button className="remove" onClick={() => removeFromCart(id)}>Remove</button>
 </div>
         </div>
         }
