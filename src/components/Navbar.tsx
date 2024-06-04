@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css"
+import { useShoppingCart } from "../context/ShoppingCartContext";
 export function Navbar() {
+  const { openCart, cartQuantity } = useShoppingCart()
   return (
     <nav>
       <ul>
@@ -14,7 +16,7 @@ export function Navbar() {
           <NavLink to="/about">About</NavLink>
         </li>
       </ul>
-      <NavLink to="/cart" className="cart-button">
+      <NavLink to="/cart" className="cart-button" onClick={openCart}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -31,7 +33,7 @@ export function Navbar() {
           <circle cx="20" cy="21" r="1"></circle>
           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.36-8.39H5.21"></path>
         </svg>
-        <div className="shopping-items">3</div>
+        <div className="shopping-items">{cartQuantity}</div>
       </NavLink>
     </nav>
   );
