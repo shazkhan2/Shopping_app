@@ -1,39 +1,37 @@
-import { createContext, ReactNode, useContext, useState  } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
+
 interface ShoppingCartProviderProps {
-    children: ReactNode;
-  }
-
-  interface CartItem {
-    id:number
-    quantity:number
-  }
-
-  interface ShoppingCartContext {
-    openCart: () => void
-    closeCart: () => void
-    cartQuantity: number
-    cartItems: CartItem[]
-    getItemsQuantity:(id:number) => number
-    increaseCartQuantity:(id:number) => void
-    decreaseCartQuantity:(id:number) => void
-    removeFromCart:(id:number) => void
-  }
-  
-  const ShoppingCartContext = createContext({} as ShoppingCartContext)
-
-export function useShoppingCart() {
-    return useContext(ShoppingCartContext)
+  children: ReactNode;
 }
 
-  export function ShoppingCartProvider({ children }:
-    ShoppingCartProviderProps) {
-        const [isOpen, setIsOpen] = useState(false)
+interface CartItem {
+  id: number;
+  quantity: number;
+}
 
-        const [cartItems, setCartItems] = useState<CartItem[]>([])
+interface ShoppingCartContext {
+  openCart: () => void;
+  closeCart: () => void;
+  cartQuantity: number;
+  cartItems: CartItem[];
+  getItemsQuantity: (id: number) => number;
+  increaseCartQuantity: (id: number) => void;
+  decreaseCartQuantity: (id: number) => void;
+  removeFromCart: (id: number) => void;
+  }
+  
+const ShoppingCartContext = createContext({} as ShoppingCartContext);
 
-        const cartQuantity = cartItems.reduce((quantity, item) =>
-        item.quantity + quantity, 0)
+export function useShoppingCart() {
+  return useContext(ShoppingCartContext);
+}
+
+export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
 
 const openCart = () => setIsOpen(true)
 const closeCart = () => setIsOpen(false)
