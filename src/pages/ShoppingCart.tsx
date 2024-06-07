@@ -1,7 +1,6 @@
-// ShoppingCart.tsx
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
-import { CartItem } from "./CartItem";
+import { CartItem } from "../components/CartItem";
 import storeItems from "../data/items.json";
 
 interface ShoppingCartProps {
@@ -9,7 +8,7 @@ interface ShoppingCartProps {
 }
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  const { closeCart, cartItems } = useShoppingCart();
+  const { cartItems } = useShoppingCart();
 
   const total = cartItems.reduce((total, cartItem) => {
     const item = storeItems.find(i => i.id === cartItem.id);
@@ -18,7 +17,6 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
 
   return (
     <div className={`shopping-cart ${isOpen ? 'open' : ''}`}>
-      <button onClick={closeCart}>Close Cart</button>
       <div>
         {cartItems.map(item => (
           <CartItem key={item.id} {...item} />
@@ -28,4 +26,3 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     </div>
   );
 }
-

@@ -1,4 +1,3 @@
-// CartItem.tsx
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
 import { formatCurrency } from "../utilities/formatCurrency";
@@ -12,7 +11,6 @@ export function CartItem({ id, quantity }: CartItemProps) {
   const { removeFromCart } = useShoppingCart();
   const item = storeItems.find(i => i.id === id);
   
-  // If the item is not found, we don't render the component
   if (item == null) return null;
 
   return (

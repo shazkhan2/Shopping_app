@@ -1,10 +1,14 @@
-// Navbar.tsx
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Navbar() {
-  const { openCart, cartQuantity } = useShoppingCart();
+  const navigate = useNavigate();  
+  const { cartQuantity } = useShoppingCart(); 
+
+  const handleCartClick = () => {
+    navigate("/cart"); 
+  };
 
   return (
     <nav>
@@ -19,7 +23,7 @@ export function Navbar() {
           <NavLink to="/about">About</NavLink>
         </li>
       </ul>
-      <button className="cart-button" onClick={openCart}>
+      <button className="cart-button" onClick={handleCartClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
