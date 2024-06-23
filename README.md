@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+**Project: Shopping App**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Description**:
+This repository hosts a React-based shopping application where users can browse items, add them to cart, and manage their shopping selections. It leverages React context for state management, ensuring a seamless experience for managing cart items and their quantities. The app includes features like dynamically updating totals, removing items from the cart, and intuitive UI components for a smooth shopping experience. Explore the code to see how React components are structured and styled using CSS for a clean and user-friendly interface.
 
-Currently, two official plugins are available:
+**Key Features**:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Store Item Component**: Displays individual items with options to add to cart.
+**Shopping Cart Component**: Manages cart items, quantities, and total cost dynamically.
+**Responsive Design**: Ensures usability across various devices with adaptive layouts.
+**Technologies Used**:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```diff
+- React,
++ TypeScript,
+! Context API,
+# CSS
 ```
+Feel free to explore the code to see how it integrates context API for state management and utilizes TypeScript for type safety. Your contributions and feedback are welcomed!
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
