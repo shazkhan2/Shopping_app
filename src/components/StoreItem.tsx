@@ -19,28 +19,26 @@ interface Item {
         <div className="card">
           <img src={imgUrl} alt={name} />
           <div className="name-price">
-            <span>{name}</span>
+            <span className="name-span">{name}</span>
             <span>{formatCurrency(price)}</span>
           </div>
           <div className="add-cart">
             {quantity === 0 ? (
-              <button onClick={() => increaseCartQuantity(id)}>+ Add to cart</button>
+              <button className="add-btn" onClick={() => increaseCartQuantity(id)}>+ Add to cart</button>
             ) : (
               <div>
+              <div className="cart-items">
                 <button onClick={() => decreaseCartQuantity(id)}>-</button>
-                <div className="cart-items">
-                  <span>{quantity}</span> in cart
+                  <span className="quantity-span">{quantity}</span> in cart
+                <button className="quantity-span" onClick={() => increaseCartQuantity(id)}>+</button>
                 </div>
-                <button onClick={() => increaseCartQuantity(id)}>+</button>
-                <div>
                   <button className="remove" onClick={() => removeFromCart(id)}>Remove</button>
                 </div>
-              </div>
             )}
-          </div>
+            </div>
         </div>
-      </div>
-    );
-  }
+        </div>
+      );
+    }
   
   
