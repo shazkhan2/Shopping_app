@@ -10,6 +10,7 @@ interface Item {
     imgUrl: string;
   }
   
+  
   export function StoreItem({ id, name, price, imgUrl }: Item) {
     const { getItemsQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart();
     const quantity = getItemsQuantity(id);

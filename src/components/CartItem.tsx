@@ -25,13 +25,16 @@ export function CartItem({ id, quantity }: CartItemProps) {
           <div className="item-price">
             {formatCurrency(item.price)}
           </div>
+        </div>
+        
           <div className="item-total">
             {formatCurrency(item.price * quantity)}
           </div>
+          <div>
           <button onClick={() => removeFromCart(item.id)} className="remove-item">
             ×
           </button>
-        </div>
+          </div>
       </div>
     </div>
   );
