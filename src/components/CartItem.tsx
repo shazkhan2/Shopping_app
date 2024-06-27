@@ -20,7 +20,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
         <img src={item.imgUrl} alt={item.name} />
         <div className="item-details">
           <div className="item-name">
-            {item.name} {quantity > 1 && <span> x{quantity}</span>}
+            {item.name} {quantity > 1 && <span> x {quantity}</span>}
           </div>
           <div className="item-price">
             {formatCurrency(item.price)}
