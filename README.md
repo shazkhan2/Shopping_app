@@ -9,6 +9,9 @@ Instead of Create React App, I experimented with creating it in Vite. Vite provi
 
 **Shopping Cart Component**: Manages cart items, quantities, and total cost dynamically.
 
-**Responsive Design**: Ensures usability across various devices with adaptive layouts.
+**Responsive Design**: I am working on it to ensures usability across various devices with adaptive layouts.
+![image](https://github.com/shazkhan2/Shopping_app/assets/115549210/8658e272-a9b9-474b-8ab3-e2d12ce23bf5)
+![image](https://github.com/shazkhan2/Shopping_app/assets/115549210/994e2124-0f4a-4d15-993f-1f5775f73090)
+
 
 
