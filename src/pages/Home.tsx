@@ -3,19 +3,19 @@ import "./Home.css";
 export function Home() {
     return (
     <div className="home-container">
-        <section>
+        <section className="top-part">
 
-        <header>
-    <h1>Styling in a grid layout </h1>
-    <p>The real magic happens in the store component. This is a CSS practise page</p>
+        <header className="header">
+    <h1 className="title">Grid layout practice </h1>
+    <p className="magic">The real magic happens in the store component</p>
     </header>
-    <div>
-        <p>
-        <Link to="/store">Store is here</Link>
+
+    <div className="personal">
+        <p className="click">
+        <Link to="/store">Magic click</Link>
         </p>
-        <p>27 June 2024</p>
-    </div>
-    <div>
+        <p className="publish-date">27 June 2024</p>
+    <div className="social">
         <a href="https://www.facebook.com">
         <i className="fab fa-facebook-f">   </i>     </a>
         <a href="https://twitter.com">
@@ -30,9 +30,12 @@ export function Home() {
           <a href="https://www.youtube.com">
             <i className="fab fa-youtube"></i>
             </a>
+            
+    </div>
     </div>
     </section>
-    <section>
+    
+    <section className="text">
         <p>
             Too often we focus on getting better at the coding part of learning to code and ignore css. here I am going back to the basics and trying to get better at that. 
             is simply dummy text of the printing and typesetting industry. 
@@ -62,7 +65,7 @@ export function Home() {
         <blockquote>
           <hr />
           <p className="quote">
-            This documents looks like a magazine
+            This document is like a magazine
           </p>
           <hr />
         </blockquote>
@@ -103,7 +106,7 @@ export function Home() {
     </section>
 
     <section className="li-section">
-        <article>
+        <article className="last-part">
             <h3>My coding journey</h3>
             <p>And it goes on</p>
             <ul>
@@ -124,6 +127,20 @@ export function Home() {
                 </li>
             </ul>
         </article>
+
+        <aside>
+        <img src="/imgs/elephant.png" alt="Elephant" ></img>  
+        <blockquote className="image-quote">
+            <hr />
+            <p className="quote">
+            When the missionaries came to Africa they had the Bible and we had the land. When they left, we had the bibile
+            and they the land.
+            </p>
+            <hr />
+          </blockquote>
+        <img src="/imgs/argument.jpg" alt="Argument" ></img>
+        </aside>
+
 
     </section>
 

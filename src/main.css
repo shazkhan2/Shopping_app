@@ -12,33 +12,15 @@ body {
   
 }
 
-a,
-button {
+a {
   text-decoration: none;
   color: var(--GrayishViolet);
-  font-weight: bold;
-  font-size: 1rem;
 }
 
 a:hover {
   color: var(--VeryDarkBlue);
 }
 
-/* Primarry button */
-
-.primary-button {
-  background-color: var(--Cyan);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-}
-
-.primary-button:hover {
-  background-color: hsl(180, 58%, 71%);
-}
 
 p {
   line-height: 1.6;
@@ -58,28 +40,4 @@ li {
 
 section {
   padding: 2rem 1rem;
-}
-
-h2 {
-  font-size: 2rem;
-  color: var(--VeryDarkBlue);
-  margin: 1rem 0;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: var(--VeryDarkBlue);
-  margin: 1rem 0;
-}
-
-h4 {
-  font-size: 1.25rem;
-  color: var(--VeryDarkBlue);
-  margin: 1rem 0;
-}
-
-@media screen and (max-width: 375px) {
-  body {
-    padding: 1rem 1rem;
-  }
 }
