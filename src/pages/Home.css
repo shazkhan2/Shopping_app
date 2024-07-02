@@ -141,6 +141,9 @@ h4 {
   grid-row-end: 3;
 }
 
+.aside {
+  background-color: red;
+}
 @media only screen and (max-width: 550px) {
   .home-container,
   .top-part,
@@ -197,4 +200,5 @@ h4 {
   .publish-date {
     align-self: center;
   }
+
 }

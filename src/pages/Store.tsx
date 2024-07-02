@@ -1,15 +1,15 @@
+
 import storeItems from "../data/items.json";
 import { StoreItem } from "../components/StoreItem";
-
-
+import "./Store.css";
 
 export function Store() {
   return (
-    <div>
+    <div className="container">
       <h1>Store</h1>
-      <div>
-        {storeItems.map((item: Item, index: number) => (
-          <div key={item.id}>
+      <div className="store-item-container">
+        {storeItems.map((item) => (
+          <div className="store-item" key={item.id}>
             <StoreItem {...item} />
           </div>
         ))}

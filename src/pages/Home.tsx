@@ -128,7 +128,7 @@ export function Home() {
             </ul>
         </article>
 
-        <aside>
+        <aside className="aside">
         <img src="/imgs/elephant.png" alt="Elephant" ></img>  
         <blockquote className="image-quote">
             <hr />
