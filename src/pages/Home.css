@@ -141,64 +141,42 @@ h4 {
   grid-row-end: 3;
 }
 
-.aside {
-  background-color: red;
-}
+
 @media only screen and (max-width: 550px) {
-  .home-container,
-  .top-part,
-  .header,
-  .personal,
-  .text,
-  .li-section,
-  .last-part,
-  .image-quote,
-  .publish-date
-  .social {
+  
+  .home-container {
+    margin-right: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
     
-
   }
-
-  .title {
-    font-size: 5rem;
-    text-align: center;
-  }
-
-  .magic,
-  .personal .click,
-  .quote,
-  h3 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .social {
-    font-size: 2rem;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .text {
-    font-size: 1.6rem;
-    align-items: center;
-  }
-
-  .last-part ul {
+  
+  .header {
+    color: green;
     display: flex;
     flex-direction: column;
-    text-align: left;
-
   }
+  
+  .text {
+display: flex;
+flex-direction: column;
+min-width: 550px;
+} 
 
-  .image-quote {
-    align-items: center;
-  }
+.li-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 550px;
+  } 
 
-  .publish-date {
-    align-self: center;
-  }
+  .li-section ul {
+    display: flex;
+    flex-direction: column;
+    min-width: 550px;
+    } 
+    .li-section aside blockquote {
+      display: flex;
+      } 
 
 }
